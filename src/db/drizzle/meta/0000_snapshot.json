@@ -1,0 +1,1863 @@
+{
+  "id": "f3d004f8-3c45-449f-b332-a038d047578d",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.annexure1": {
+      "name": "annexure1",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "year": {
+          "name": "year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "serial_no": {
+          "name": "serial_no",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "m_rainfall": {
+          "name": "m_rainfall",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "m_other_sources": {
+          "name": "m_other_sources",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nm_rainfall": {
+          "name": "nm_rainfall",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nm_other_sources": {
+          "name": "nm_other_sources",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_annual_recharge": {
+          "name": "total_annual_recharge",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "natural_discharge": {
+          "name": "natural_discharge",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "annual_extractable": {
+          "name": "annual_extractable",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "irri": {
+          "name": "irri",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ind": {
+          "name": "ind",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dom": {
+          "name": "dom",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extraction_total": {
+          "name": "extraction_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allocation_domestic": {
+          "name": "allocation_domestic",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "net_availability": {
+          "name": "net_availability",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stage_percent": {
+          "name": "stage_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.annexure2": {
+      "name": "annexure2",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "year": {
+          "name": "year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "serial_no": {
+          "name": "serial_no",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "district": {
+          "name": "district",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "m_rainfall": {
+          "name": "m_rainfall",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "m_other_sources": {
+          "name": "m_other_sources",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nm_rainfall": {
+          "name": "nm_rainfall",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nm_other_sources": {
+          "name": "nm_other_sources",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_annual": {
+          "name": "total_annual",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "natural_discharge": {
+          "name": "natural_discharge",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "annual_extractable": {
+          "name": "annual_extractable",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ext_irri": {
+          "name": "ext_irri",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ext_ind": {
+          "name": "ext_ind",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ext_dom": {
+          "name": "ext_dom",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ext_total": {
+          "name": "ext_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allocation_domestic": {
+          "name": "allocation_domestic",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "net_availability": {
+          "name": "net_availability",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stage_percent": {
+          "name": "stage_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.annexure3a_state_categorization": {
+      "name": "annexure3a_state_categorization",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "year": {
+          "name": "year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "serial_no": {
+          "name": "serial_no",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_assessed_units": {
+          "name": "total_assessed_units",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "safe_count": {
+          "name": "safe_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "safe_percent": {
+          "name": "safe_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "semi_critical_count": {
+          "name": "semi_critical_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "semi_critical_percent": {
+          "name": "semi_critical_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critical_count": {
+          "name": "critical_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critical_percent": {
+          "name": "critical_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "over_exploited_count": {
+          "name": "over_exploited_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "over_exploited_percent": {
+          "name": "over_exploited_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_count": {
+          "name": "saline_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_percent": {
+          "name": "saline_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.annexure3b_district_categorization": {
+      "name": "annexure3b_district_categorization",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "year": {
+          "name": "year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "serial_no": {
+          "name": "serial_no",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "district": {
+          "name": "district",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_assessed_units": {
+          "name": "total_assessed_units",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "safe_count": {
+          "name": "safe_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "safe_percent": {
+          "name": "safe_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "semi_critical_count": {
+          "name": "semi_critical_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "semi_critical_percent": {
+          "name": "semi_critical_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critical_count": {
+          "name": "critical_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critical_percent": {
+          "name": "critical_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "over_exploited_count": {
+          "name": "over_exploited_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "over_exploited_percent": {
+          "name": "over_exploited_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_count": {
+          "name": "saline_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_percent": {
+          "name": "saline_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.annexure3c_state_extractable_resource": {
+      "name": "annexure3c_state_extractable_resource",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "year": {
+          "name": "year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "serial_no": {
+          "name": "serial_no",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_extractable_resource_ham": {
+          "name": "total_extractable_resource_ham",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "safe_resource_ham": {
+          "name": "safe_resource_ham",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "safe_percent": {
+          "name": "safe_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "semi_critical_resource_ham": {
+          "name": "semi_critical_resource_ham",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "semi_critical_percent": {
+          "name": "semi_critical_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critical_resource_ham": {
+          "name": "critical_resource_ham",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critical_percent": {
+          "name": "critical_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "over_exploited_resource_ham": {
+          "name": "over_exploited_resource_ham",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "over_exploited_percent": {
+          "name": "over_exploited_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_resource_ham": {
+          "name": "saline_resource_ham",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_percent": {
+          "name": "saline_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.annexure3d_district_extractable_resource": {
+      "name": "annexure3d_district_extractable_resource",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "year": {
+          "name": "year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "serial_no": {
+          "name": "serial_no",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "district": {
+          "name": "district",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_extractable_resource_ham": {
+          "name": "total_extractable_resource_ham",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "safe_resource_ham": {
+          "name": "safe_resource_ham",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "safe_percent": {
+          "name": "safe_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "semi_critical_resource_ham": {
+          "name": "semi_critical_resource_ham",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "semi_critical_percent": {
+          "name": "semi_critical_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critical_resource_ham": {
+          "name": "critical_resource_ham",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critical_percent": {
+          "name": "critical_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "over_exploited_resource_ham": {
+          "name": "over_exploited_resource_ham",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "over_exploited_percent": {
+          "name": "over_exploited_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_resource_ham": {
+          "name": "saline_resource_ham",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_percent": {
+          "name": "saline_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.annexure3e_state_area_categorization": {
+      "name": "annexure3e_state_area_categorization",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "year": {
+          "name": "year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "serial_no": {
+          "name": "serial_no",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_geographical_area_sq_km": {
+          "name": "total_geographical_area_sq_km",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_worthy_area_sq_km": {
+          "name": "recharge_worthy_area_sq_km",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "safe_area_sq_km": {
+          "name": "safe_area_sq_km",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "safe_percent": {
+          "name": "safe_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "semi_critical_area_sq_km": {
+          "name": "semi_critical_area_sq_km",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "semi_critical_percent": {
+          "name": "semi_critical_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critical_area_sq_km": {
+          "name": "critical_area_sq_km",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critical_percent": {
+          "name": "critical_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "over_exploited_area_sq_km": {
+          "name": "over_exploited_area_sq_km",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "over_exploited_percent": {
+          "name": "over_exploited_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_area_sq_km": {
+          "name": "saline_area_sq_km",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_percent": {
+          "name": "saline_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.annexure3f_district_area_categorization": {
+      "name": "annexure3f_district_area_categorization",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "year": {
+          "name": "year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "serial_no": {
+          "name": "serial_no",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "district": {
+          "name": "district",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_recharge_worthy_area_sq_km": {
+          "name": "total_recharge_worthy_area_sq_km",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "safe_area_sq_km": {
+          "name": "safe_area_sq_km",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "safe_percent": {
+          "name": "safe_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "semi_critical_area_sq_km": {
+          "name": "semi_critical_area_sq_km",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "semi_critical_percent": {
+          "name": "semi_critical_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critical_area_sq_km": {
+          "name": "critical_area_sq_km",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critical_percent": {
+          "name": "critical_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "over_exploited_area_sq_km": {
+          "name": "over_exploited_area_sq_km",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "over_exploited_percent": {
+          "name": "over_exploited_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_area_sq_km": {
+          "name": "saline_area_sq_km",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_percent": {
+          "name": "saline_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.annexure4a_categorized_units": {
+      "name": "annexure4a_categorized_units",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "year": {
+          "name": "year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "district": {
+          "name": "district",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "semi_critical_unit": {
+          "name": "semi_critical_unit",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critical_unit": {
+          "name": "critical_unit",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "over_exploited_unit": {
+          "name": "over_exploited_unit",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.annexure4b_quality_problems": {
+      "name": "annexure4b_quality_problems",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "year": {
+          "name": "year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "district": {
+          "name": "district",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "fluoride_affected_unit": {
+          "name": "fluoride_affected_unit",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "arsenic_affected_unit": {
+          "name": "arsenic_affected_unit",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "salinity_affected_unit": {
+          "name": "salinity_affected_unit",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.attribute_detailed": {
+      "name": "attribute_detailed",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "year": {
+          "name": "year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "serial_no": {
+          "name": "serial_no",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state_code": {
+          "name": "state_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "district_code": {
+          "name": "district_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "block_code": {
+          "name": "block_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "district": {
+          "name": "district",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "assessment_unit": {
+          "name": "assessment_unit",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "geo_area": {
+          "name": "geo_area",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_worthy_area": {
+          "name": "recharge_worthy_area",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_rainfall_m": {
+          "name": "recharge_rainfall_m",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_other_m": {
+          "name": "recharge_other_m",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_rainfall_nm": {
+          "name": "recharge_rainfall_nm",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_other_nm": {
+          "name": "recharge_other_nm",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "annual_recharge": {
+          "name": "annual_recharge",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "natural_discharge": {
+          "name": "natural_discharge",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "annual_extractable": {
+          "name": "annual_extractable",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extraction_irrigation": {
+          "name": "extraction_irrigation",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extraction_industrial": {
+          "name": "extraction_industrial",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extraction_domestic": {
+          "name": "extraction_domestic",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extraction_total": {
+          "name": "extraction_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allocation_domestic_2025": {
+          "name": "allocation_domestic_2025",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "net_availability": {
+          "name": "net_availability",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stage_percent": {
+          "name": "stage_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "categorization": {
+          "name": "categorization",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "aquifer": {
+          "name": "aquifer",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.attribute_summary": {
+      "name": "attribute_summary",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "year": {
+          "name": "year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "over_exploited_count": {
+          "name": "over_exploited_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "safe_count": {
+          "name": "safe_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_count": {
+          "name": "saline_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critical_count": {
+          "name": "critical_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "semi_critical_count": {
+          "name": "semi_critical_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_count": {
+          "name": "total_count",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.central_report": {
+      "name": "central_report",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "year": {
+          "name": "year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "serial_no": {
+          "name": "serial_no",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "district": {
+          "name": "district",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "assessment_unit": {
+          "name": "assessment_unit",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_contaminated": {
+          "name": "rainfall_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_non_contaminated": {
+          "name": "rainfall_non_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_poor_quality": {
+          "name": "rainfall_poor_quality",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_total": {
+          "name": "rainfall_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_worthy_contaminated": {
+          "name": "recharge_worthy_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_worthy_non_contaminated": {
+          "name": "recharge_worthy_non_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_worthy_poor_quality": {
+          "name": "recharge_worthy_poor_quality",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_worthy_total": {
+          "name": "recharge_worthy_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hilly_area": {
+          "name": "hilly_area",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "geo_area_total": {
+          "name": "geo_area_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_recharge_contaminated": {
+          "name": "rainfall_recharge_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_recharge_non_contaminated": {
+          "name": "rainfall_recharge_non_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_recharge_poor_quality": {
+          "name": "rainfall_recharge_poor_quality",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_recharge_total": {
+          "name": "rainfall_recharge_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_other_monsoon": {
+          "name": "recharge_other_monsoon",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "non_monsoon_rainfall": {
+          "name": "non_monsoon_rainfall",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_annual_recharge": {
+          "name": "total_annual_recharge",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "natural_discharge": {
+          "name": "natural_discharge",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "annual_extractable": {
+          "name": "annual_extractable",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extraction_irrigation": {
+          "name": "extraction_irrigation",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extraction_domestic": {
+          "name": "extraction_domestic",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extraction_industrial": {
+          "name": "extraction_industrial",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extraction_total": {
+          "name": "extraction_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stage_percent": {
+          "name": "stage_percent",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "categorization": {
+          "name": "categorization",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.state_report": {
+      "name": "state_report",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "year": {
+          "name": "year",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "state": {
+          "name": "state",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "district": {
+          "name": "district",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "assessment_unit": {
+          "name": "assessment_unit",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "serial_no": {
+          "name": "serial_no",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_contaminated": {
+          "name": "rainfall_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_non_contaminated": {
+          "name": "rainfall_non_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_poor_quality": {
+          "name": "rainfall_poor_quality",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_total": {
+          "name": "rainfall_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_worthy_contaminated": {
+          "name": "recharge_worthy_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_worthy_non_contaminated": {
+          "name": "recharge_worthy_non_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_worthy_poor_quality": {
+          "name": "recharge_worthy_poor_quality",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recharge_worthy_total": {
+          "name": "recharge_worthy_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hilly_area": {
+          "name": "hilly_area",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "geo_area_total": {
+          "name": "geo_area_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_recharge_contaminated": {
+          "name": "rainfall_recharge_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_recharge_non_contaminated": {
+          "name": "rainfall_recharge_non_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_recharge_poor_quality": {
+          "name": "rainfall_recharge_poor_quality",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rainfall_recharge_total": {
+          "name": "rainfall_recharge_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tanks_ponds_contaminated": {
+          "name": "tanks_ponds_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tanks_ponds_non_contaminated": {
+          "name": "tanks_ponds_non_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tanks_ponds_poor_quality": {
+          "name": "tanks_ponds_poor_quality",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tanks_ponds_total": {
+          "name": "tanks_ponds_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "subtotal_contaminated": {
+          "name": "subtotal_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "subtotal_non_contaminated": {
+          "name": "subtotal_non_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "subtotal_poor_quality": {
+          "name": "subtotal_poor_quality",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "subtotal_total": {
+          "name": "subtotal_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "annual_gw_recharge_contaminated": {
+          "name": "annual_gw_recharge_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "annual_gw_recharge_non_contaminated": {
+          "name": "annual_gw_recharge_non_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "annual_gw_recharge_poor_quality": {
+          "name": "annual_gw_recharge_poor_quality",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "annual_gw_recharge_total": {
+          "name": "annual_gw_recharge_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "environmental_flow_contaminated": {
+          "name": "environmental_flow_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "environmental_flow_non_contaminated": {
+          "name": "environmental_flow_non_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "environmental_flow_poor_quality": {
+          "name": "environmental_flow_poor_quality",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "environmental_flow_total": {
+          "name": "environmental_flow_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extractable_contaminated": {
+          "name": "extractable_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extractable_non_contaminated": {
+          "name": "extractable_non_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extractable_poor_quality": {
+          "name": "extractable_poor_quality",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extractable_total": {
+          "name": "extractable_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extraction_domestic_c": {
+          "name": "extraction_domestic_c",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extraction_domestic_nc": {
+          "name": "extraction_domestic_nc",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extraction_domestic_pq": {
+          "name": "extraction_domestic_pq",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "extraction_domestic_total": {
+          "name": "extraction_domestic_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stage_extraction_contaminated": {
+          "name": "stage_extraction_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stage_extraction_non_contaminated": {
+          "name": "stage_extraction_non_contaminated",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stage_extraction_poor_quality": {
+          "name": "stage_extraction_poor_quality",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stage_extraction_total": {
+          "name": "stage_extraction_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allocation_domestic_c": {
+          "name": "allocation_domestic_c",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allocation_domestic_nc": {
+          "name": "allocation_domestic_nc",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allocation_domestic_pq": {
+          "name": "allocation_domestic_pq",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allocation_domestic_total": {
+          "name": "allocation_domestic_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "net_gw_availability_c": {
+          "name": "net_gw_availability_c",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "net_gw_availability_nc": {
+          "name": "net_gw_availability_nc",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "net_gw_availability_pq": {
+          "name": "net_gw_availability_pq",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "net_gw_availability_total": {
+          "name": "net_gw_availability_total",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "waterlogged": {
+          "name": "waterlogged",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "flood_prone": {
+          "name": "flood_prone",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "spring_discharge": {
+          "name": "spring_discharge",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fresh_unconfined": {
+          "name": "fresh_unconfined",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_unconfined": {
+          "name": "saline_unconfined",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fresh_confined": {
+          "name": "fresh_confined",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_confined": {
+          "name": "saline_confined",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fresh_semi_confined": {
+          "name": "fresh_semi_confined",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "saline_semi_confined": {
+          "name": "saline_semi_confined",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

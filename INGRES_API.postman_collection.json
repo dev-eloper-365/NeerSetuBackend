@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "ingres-api-collection",
+		"name": "INGRES Groundwater API",
+		"description": "Collection for testing INGRES Groundwater Chat API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Chat Stream - Basic Query",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response is text/event-stream\", function () {",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"text/event-stream\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": \"What is the groundwater status in Karnataka?\",\n  \"language\": \"en\",\n  \"chatHistory\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/api/gw-chat/stream",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"gw-chat",
+						"stream"
+					]
+				},
+				"description": "Basic query to test the streaming chat endpoint"
+			},
+			"response": []
+		},
+		{
+			"name": "Chat Stream - Compare States",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": \"Compare groundwater extraction rates between Gujarat and Rajasthan\",\n  \"language\": \"en\",\n  \"chatHistory\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/api/gw-chat/stream",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"gw-chat",
+						"stream"
+					]
+				},
+				"description": "Query to compare two states"
+			},
+			"response": []
+		},
+		{
+			"name": "Chat Stream - Top Locations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": \"Which states have the highest groundwater extraction rates?\",\n  \"language\": \"en\",\n  \"chatHistory\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/api/gw-chat/stream",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"gw-chat",
+						"stream"
+					]
+				},
+				"description": "Query to get top locations by extraction rate"
+			},
+			"response": []
+		},
+		{
+			"name": "Chat Stream - With History",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": \"Tell me more about the extraction rates\",\n  \"language\": \"en\",\n  \"chatHistory\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"What is the groundwater status in Karnataka?\"\n    },\n    {\n      \"role\": \"assistant\",\n      \"content\": \"Karnataka has diverse groundwater conditions across its districts...\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/api/gw-chat/stream",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"gw-chat",
+						"stream"
+					]
+				},
+				"description": "Query with chat history context"
+			},
+			"response": []
+		},
+		{
+			"name": "Chat Stream - Hindi Language",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": \"कर्नाटक में भूजल की स्थिति क्या है?\",\n  \"language\": \"hi\",\n  \"chatHistory\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/api/gw-chat/stream",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"gw-chat",
+						"stream"
+					]
+				},
+				"description": "Query in Hindi language"
+			},
+			"response": []
+		},
+		{
+			"name": "Chat - Non-Streaming",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": \"What is the groundwater status in Maharashtra?\",\n  \"language\": \"en\",\n  \"chatHistory\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/api/gw-chat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"gw-chat"
+					]
+				},
+				"description": "Non-streaming chat endpoint (returns complete response)"
+			},
+			"response": []
+		},
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3004/api/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"health"
+					]
+				},
+				"description": "Health check endpoint"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3004",
+			"type": "string"
+		}
+	]
+}
+

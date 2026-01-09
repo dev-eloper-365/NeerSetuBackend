@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: groundwater-backend
+    env: node
+    plan: free
+    buildCommand: pnpm install && pnpm build
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    autoDeploy: true
+    branch: main
+    rootDir: .
