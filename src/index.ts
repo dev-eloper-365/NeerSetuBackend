@@ -37,8 +37,9 @@ async function start() {
     // Initialize location search for groundwater queries
     await initLocationSearch();
 
-    app.listen(PORT, () => {
-      logger.info(`Server running on http://localhost:${PORT}`);
+    const host = process.env.RENDER ? '0.0.0.0' : 'localhost';
+    app.listen(PORT, host, () => {
+      logger.info(`Server running on http://${host}:${PORT}`);
     });
   } catch (error) {
     logger.error(error, "Failed to start server");

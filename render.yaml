@@ -1,13 +1,77 @@
 services:
+  # PostgreSQL Database
+  - type: pserv
+    name: groundwater-db
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile.postgres
+    disk:
+      name: groundwater-data
+      mountPath: /var/lib/postgresql/data
+      sizeGB: 1
+    envVars:
+      - key: POSTGRES_USER
+        value: postgres
+      - key: POSTGRES_PASSWORD
+        generateValue: true
+      - key: POSTGRES_DB
+        value: ingres
+
+  # Web Service
   - type: web
     name: groundwater-backend
     env: node
     plan: free
+    region: oregon
     buildCommand: pnpm install && pnpm build
     startCommand: pnpm start
+    healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
         value: production
+      - key: PORT
+        value: 10000
+      - key: POSTGRES_USER
+        value: postgres
+      - key: POSTGRES_PASSWORD
+        fromService:
+          type: pserv
+          name: groundwater-db
+          envVarKey: POSTGRES_PASSWORD
+      - key: POSTGRES_HOST
+        fromService:
+          type: pserv
+          name: groundwater-db
+          property: host
+      - key: POSTGRES_PORT
+        fromService:
+          type: pserv
+          name: groundwater-db
+          property: port
+      - key: POSTGRES_DB
+        value: ingres
+      - key: COLLECTION_NAME
+        value: ingres_groundwater
+      - key: CHROMA_URL
+        value: http://localhost:8000
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: LANGSMITH_API_KEY
+        sync: false
+      - key: LANGSMITH_TRACING
+        value: true
+      - key: LANGCHAIN_TRACING
+        value: true
+      - key: LANGCHAIN_TRACING_V2
+        value: true
+      - key: LANGSMITH_ENDPOINT
+        value: https://api.smith.langchain.com
+      - key: LANGCHAIN_ENDPOINT
+        value: https://api.smith.langchain.com
+      - key: LANGSMITH_PROJECT
+        value: "Workspace 1"
     autoDeploy: true
     branch: main
-    rootDir: .
