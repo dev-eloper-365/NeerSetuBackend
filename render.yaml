@@ -5,7 +5,6 @@ databases:
     region: oregon
 
 services:
-  # Web Service
   - type: web
     name: groundwater-backend
     runtime: node
@@ -43,8 +42,6 @@ services:
           property: database
       - key: COLLECTION_NAME
         value: ingres_groundwater
-      - key: CHROMA_URL
-        value: http://localhost:8000
       - key: GROQ_API_KEY
         sync: false
       - key: GOOGLE_API_KEY
@@ -52,16 +49,14 @@ services:
       - key: LANGSMITH_API_KEY
         sync: false
       - key: LANGSMITH_TRACING
-        value: true
+        value: "true"
       - key: LANGCHAIN_TRACING
-        value: true
+        value: "true"
       - key: LANGCHAIN_TRACING_V2
-        value: true
+        value: "true"
       - key: LANGSMITH_ENDPOINT
         value: https://api.smith.langchain.com
       - key: LANGCHAIN_ENDPOINT
         value: https://api.smith.langchain.com
       - key: LANGSMITH_PROJECT
-        value: "Workspace 1"
-    autoDeploy: true
-    branch: main
+        value: Workspace 1
