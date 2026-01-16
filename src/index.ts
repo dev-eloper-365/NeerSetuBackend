@@ -7,6 +7,7 @@ import cors from "cors";
 import gwChatRouter from "./routes/gwChat.js";
 import gwMapRouter from "./routes/gwMap.js";
 import { initLocationSearch } from "./services/locationSearch.js";
+import { runMigrations } from "./db/migrate.js";
 import logger from "./utils/logger.js";
 import { requestLogger, errorHandler } from "./middleware/logging.js";
 
@@ -39,6 +40,14 @@ async function start() {
     const server = app.listen(PORT, host, () => {
       logger.info(`Server running on http://${host}:${PORT}`);
     });
+
+    // Run database migrations
+    const migrationSuccess = await runMigrations();
+    if (migrationSuccess) {
+      logger.info("Database migrations completed");
+    } else {
+      logger.warn("Database migrations failed - some features may not work");
+    }
 
     // Initialize location search in the background (non-blocking)
     initLocationSearch()
