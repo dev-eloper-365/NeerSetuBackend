@@ -34,13 +34,22 @@ app.use(errorHandler);
 // Initialize services and start server
 async function start() {
   try {
-    // Initialize location search for groundwater queries
-    await initLocationSearch();
-
+    // Start the server first
     const host = process.env.RENDER ? '0.0.0.0' : 'localhost';
-    app.listen(PORT, host, () => {
+    const server = app.listen(PORT, host, () => {
       logger.info(`Server running on http://${host}:${PORT}`);
     });
+
+    // Initialize location search in the background (non-blocking)
+    initLocationSearch()
+      .then(() => {
+        logger.info("Location search initialized successfully");
+      })
+      .catch((error) => {
+        logger.error(error, "Failed to initialize location search - some features may not work");
+        logger.warn("The server is running but location-based queries will fail until database is connected");
+      });
+
   } catch (error) {
     logger.error(error, "Failed to start server");
     process.exit(1);
