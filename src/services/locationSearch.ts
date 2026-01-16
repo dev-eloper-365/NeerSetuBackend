@@ -14,15 +14,31 @@ export interface LocationRecord {
 let locationCache: LocationRecord[] = [];
 let fuse: Fuse<LocationRecord> | null = null;
 
-export async function initLocationSearch(): Promise<void> {
-  locationCache = await db.select().from(locations);
+export async function initLocationSearch(retries = 5, delay = 2000): Promise<void> {
+  for (let i = 0; i < retries; i++) {
+    try {
+      locationCache = await db.select().from(locations);
 
-  fuse = new Fuse(locationCache, {
-    keys: ["name"],
-    threshold: 0.4,
-    includeScore: true,
-    ignoreLocation: true,
-  });
+      fuse = new Fuse(locationCache, {
+        keys: ["name"],
+        threshold: 0.4,
+        includeScore: true,
+        ignoreLocation: true,
+      });
+      
+      console.log(`Location search initialized with ${locationCache.length} locations`);
+      return;
+    } catch (error) {
+      console.error(`Failed to initialize location search (attempt ${i + 1}/${retries}):`, error);
+      
+      if (i < retries - 1) {
+        console.log(`Retrying in ${delay}ms...`);
+        await new Promise(resolve => setTimeout(resolve, delay));
+      } else {
+        throw new Error(`Failed to initialize location search after ${retries} attempts`);
+      }
+    }
+  }
 }
 
 export interface SearchResult {
