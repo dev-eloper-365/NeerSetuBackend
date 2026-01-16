@@ -12,7 +12,7 @@ import { requestLogger, errorHandler } from "./middleware/logging.js";
 
 dotenv.config();
 const app = express();
-const PORT = process.env.PORT || 3004;
+const PORT = parseInt(process.env.PORT || '3004', 10);
 
 // Middleware
 app.use(cors());
