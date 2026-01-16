@@ -1,12 +1,11 @@
-services:
-  # PostgreSQL Database
-  - type: postgres
-    name: groundwater-db
-    plan: free
+databases:
+  - name: groundwater-db
     databaseName: ingres
     user: postgres
+    plan: free
     region: oregon
 
+services:
   # Web Service
   - type: web
     name: groundwater-backend
