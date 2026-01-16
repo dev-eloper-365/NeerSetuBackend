@@ -1,7 +1,6 @@
 databases:
   - name: groundwater-db
     databaseName: ingres
-    user: postgres
     plan: free
     region: oregon
 
@@ -22,12 +21,6 @@ services:
         fromDatabase:
           name: groundwater-db
           property: connectionString
-      - key: POSTGRES_USER
-        value: postgres
-      - key: POSTGRES_PASSWORD
-        fromDatabase:
-          name: groundwater-db
-          property: password
       - key: POSTGRES_HOST
         fromDatabase:
           name: groundwater-db
@@ -36,6 +29,14 @@ services:
         fromDatabase:
           name: groundwater-db
           property: port
+      - key: POSTGRES_USER
+        fromDatabase:
+          name: groundwater-db
+          property: user
+      - key: POSTGRES_PASSWORD
+        fromDatabase:
+          name: groundwater-db
+          property: password
       - key: POSTGRES_DB
         fromDatabase:
           name: groundwater-db
