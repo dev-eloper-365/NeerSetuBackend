@@ -790,9 +790,8 @@ export async function seedDatabase() {
   }
 }
 
-// Run if called directly
-const isMainModule = import.meta.url === `file://${process.argv[1]}`;
-if (isMainModule) {
+// Run if called directly via tsx/node
+if (require.main === module) {
   seedDatabase()
     .then(() => {
       console.log("Done!");
