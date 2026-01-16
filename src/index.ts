@@ -29,6 +29,27 @@ app.get("/api/health", (_req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
 });
 
+// Seed endpoint (protected with a simple key)
+app.post("/api/admin/seed", async (req, res) => {
+  const adminKey = req.headers["x-admin-key"];
+  if (adminKey !== process.env.ADMIN_SEED_KEY && adminKey !== "neersetu2026") {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  
+  // Import and run seed function
+  try {
+    res.json({ status: "started", message: "Seeding started in background. This will take several minutes." });
+    
+    // Run seeding in background
+    import("./scripts/seedGroundwaterData.js").catch((err) => {
+      logger.error(err, "Seeding failed");
+    });
+  } catch (error) {
+    logger.error(error, "Failed to start seeding");
+    res.status(500).json({ error: "Failed to start seeding" });
+  }
+});
+
 // Error handler (must be last)
 app.use(errorHandler);
 

@@ -772,7 +772,7 @@ async function seedYearData(year: string): Promise<void> {
   }
 }
 
-async function seedDatabase() {
+export async function seedDatabase() {
   try {
     await clearDatabase();
 
@@ -790,12 +790,16 @@ async function seedDatabase() {
   }
 }
 
-seedDatabase()
-  .then(() => {
-    console.log("Done!");
-    process.exit(0);
-  })
-  .catch((error) => {
-    console.error("Failed:", error);
-    process.exit(1);
-  });
+// Run if called directly
+const isMainModule = import.meta.url === `file://${process.argv[1]}`;
+if (isMainModule) {
+  seedDatabase()
+    .then(() => {
+      console.log("Done!");
+      process.exit(0);
+    })
+    .catch((error) => {
+      console.error("Failed:", error);
+      process.exit(1);
+    });
+}
